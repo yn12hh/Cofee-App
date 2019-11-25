@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">coffeeApp</string>
     <string name="good_day">Good day!</string>
+    <string name="one">ONE</string>
+    <string name="two">TWO</string>
+    <string name="three">THREE</string>
+    <string name="four">FOUR</string>
+    <string name="five">FIVE</string>
+    <string name="coffee_type_1">coffee_type_1</string>
+    <string name="coffee_type_2">coffee_type_2</string>
+    <string name="coffee_type_3">coffee_type_3</string>
+    <string name="coffee_type_4">coffee_type_4</string>
+    <string name="coffee_type_5">coffee_type_5</string>
+    <string name="coffee_type_6">coffee_type_6</string>
+    <string name="your_order">Your Order:</string>
+    <string name="make_an_order">Make An Order!</string>
+    <string name="no_milk">No Milk</string>
+    <string name="cow_milk">Cow Milk</string>
+    <string name="soy_milk">Soy Milk</string>
+    <string name="coffee_degree">Coffee Degree</string>
+    <string name="sugar">Sugar</string>
+    <string name="milk">Milk</string>
+    <string name="temperature">Temperature</string>
 </resources>
