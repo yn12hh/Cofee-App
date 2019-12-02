@@ -26,13 +26,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="618dp"
+        android:layout_height="match_parent"
         android:layoutDirection="ltr"
         android:textDirection="ltr">
 
         <LinearLayout
             android:id="@+id/order_options_layout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#56B3A19E"
             android:clipToPadding="false"
@@ -60,7 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
-                    android:paddingLeft="3dp"
+                    android:paddingStart="3dp"
                     android:text="@string/type"
                     android:textDirection="ltr" />
 
@@ -93,7 +93,7 @@
                             android:layoutDirection="ltr"
                             android:onClick="coffeeChoice"
                             android:outlineSpotShadowColor="#00461616"
-                            android:paddingLeft="3dp"
+                            android:paddingStart="3dp"
                             android:scrollbarSize="4dp"
                             android:textDirection="ltr"
                             android:visibility="visible"
@@ -109,7 +109,7 @@
                             android:foregroundGravity="bottom"
                             android:layoutDirection="ltr"
                             android:onClick="coffeeChoice"
-                            android:paddingLeft="3dp"
+                            android:paddingStart="3dp"
                             android:textDirection="ltr"
                             app:srcCompat="@drawable/esspreso_bw" />
 
@@ -121,8 +121,8 @@
                             android:contentDescription="@string/coffee_type_4"
                             android:layoutDirection="ltr"
                             android:onClick="coffeeChoice"
-                            android:paddingLeft="3dp"
-                            android:paddingRight="5dp"
+                            android:paddingStart="3dp"
+                            android:paddingEnd="5dp"
                             android:textDirection="ltr"
                             app:srcCompat="@drawable/cappuccino_bw" />
 
@@ -134,7 +134,7 @@
                             android:contentDescription="@string/coffee_type_2"
                             android:layoutDirection="ltr"
                             android:onClick="coffeeChoice"
-                            android:paddingRight="3dp"
+                            android:paddingEnd="3dp"
                             android:textDirection="ltr"
                             app:srcCompat="@drawable/latte_bw" />
 
@@ -158,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
-                    android:text="Size"
+                    android:text="Size: Small"
                     android:textDirection="ltr" />
 
                 <LinearLayout
@@ -215,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
-                    android:text="@string/milk"
+                    android:text="Milk: No Milk"
                     android:textDirection="ltr" />
 
                 <LinearLayout
@@ -233,12 +233,13 @@
 
                     <RadioGroup
                         android:id="@+id/milk_radioGroup"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
                         android:dividerPadding="100dp"
                         android:gravity="center_horizontal"
                         android:layoutDirection="ltr"
+                        android:onClick="milkRadioChoice"
                         android:orientation="horizontal"
                         android:padding="10dp"
                         android:scrollbarAlwaysDrawHorizontalTrack="false"
@@ -268,6 +269,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:layoutDirection="ltr"
+                            android:onClick="milkRadioChoice"
                             android:padding="5dp"
                             android:text="Cow"
                             android:textAlignment="textStart"
@@ -282,6 +284,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:layoutDirection="ltr"
+                            android:onClick="milkRadioChoice"
                             android:padding="5dp"
                             android:text="Soy"
                             android:textAlignment="textStart"
@@ -296,9 +299,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:autoText="false"
                             android:freezesText="false"
                             android:layoutDirection="ltr"
+                            android:onClick="milkRadioChoice"
                             android:text="Almonds "
                             android:textAlignment="textStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -324,7 +327,7 @@
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
-                    android:text="@string/sugar"
+                    android:text="Sugar: No Sugar"
                     android:textDirection="ltr" />
 
                 <HorizontalScrollView
@@ -336,6 +339,7 @@
                     android:textDirection="ltr">
 
                     <LinearLayout
+                        android:id="@+id/sugar_second_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -367,6 +371,7 @@
                             android:contentDescription="@string/coffee_type_2"
                             android:layoutDirection="ltr"
                             android:onClick="sugarChoice"
+                            android:padding="17dp"
                             android:paddingLeft="5dp"
                             android:paddingRight="5dp"
                             android:textDirection="ltr"
@@ -402,7 +407,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/temp_layout"
+                android:id="@+id/intensity_row_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layoutDirection="ltr"
@@ -410,34 +415,76 @@
                 android:textDirection="ltr">
 
                 <TextView
-                    android:id="@+id/temp_title"
+                    android:id="@+id/intesity_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
-                    android:text="@string/temperature"
+                    android:text="Intensity: Regular"
                     android:textDirection="ltr" />
 
-                <SeekBar
-                    android:id="@+id/temp_bar"
-                    style="@style/Widget.AppCompat.SeekBar"
+                <LinearLayout
+                    android:id="@+id/intensity_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/coffee_degree"
-                    android:indeterminate="false"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
                     android:layoutDirection="ltr"
-                    android:max="5"
-                    android:padding="20dp"
-                    android:paddingTop="20dp"
-                    android:paddingBottom="40dp"
-                    android:progress="4"
-                    android:scrollX="2dp"
-                    android:scrollbarAlwaysDrawHorizontalTrack="true"
-                    android:scrollbarStyle="outsideInset"
-                    android:textAlignment="center"
-                    android:textDirection="ltr"
-                    android:verticalScrollbarPosition="defaultPosition"
-                    app:tickMarkTint="#00521111" />
+                    android:orientation="horizontal"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:textDirection="ltr">
+
+                    <ImageView
+                        android:id="@+id/decaff"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/coffee_type_2"
+                        android:layoutDirection="ltr"
+                        android:onClick="intensityChoice"
+                        android:padding="30dp"
+                        android:textDirection="ltr"
+                        app:srcCompat="@drawable/no_sugar_bw" />
+
+                    <ImageView
+                        android:id="@+id/one_caff"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/coffee_type_2"
+                        android:layoutDirection="ltr"
+                        android:onClick="intensityChoice"
+                        android:padding="30dp"
+                        android:textDirection="ltr"
+                        app:srcCompat="@drawable/coffee_strength_1_color" />
+
+                    <ImageView
+                        android:id="@+id/two_caff"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/coffee_type_2"
+                        android:layoutDirection="ltr"
+                        android:onClick="intensityChoice"
+                        android:padding="18dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textDirection="ltr"
+                        app:srcCompat="@drawable/coffee_strength_2_bw" />
+
+                    <ImageView
+                        android:id="@+id/three_caff"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/coffee_type_2"
+                        android:layoutDirection="ltr"
+                        android:onClick="intensityChoice"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textDirection="ltr"
+                        app:srcCompat="@drawable/coffee_strength_3_bw" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/order_finish_layout"
@@ -452,8 +499,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#5A3D1C"
-                        android:cursorVisible="false"
-                        android:enabled="false"
                         android:layoutDirection="ltr"
                         android:onClick="sendOrder"
                         android:padding="10dp"
