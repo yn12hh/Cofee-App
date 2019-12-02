@@ -63,14 +63,6 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
         startActivity(intent);
     }
 
-    public void pickTime(View view) {
-        AlertDialog.Builder myAlertBuilder = new
-                AlertDialog.Builder(checkOut.this);
-        myAlertBuilder.setTitle("Alert");
-        myAlertBuilder.setMessage("Click OK to continue, or Cancel to stop:");
-
-    }
-
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         String orderTime = "";
