@@ -4,25 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/order_background"
     android:layoutDirection="ltr"
     android:orientation="vertical"
     android:outlineAmbientShadowColor="#00000000"
     android:textDirection="ltr"
     tools:context=".orderActivity">
 
-    <TextView
-        android:id="@+id/your_order_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:layoutDirection="ltr"
-        android:text="@string/choose_your_moment"
-        android:textDirection="ltr"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/order_title"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        app:srcCompat="@drawable/order_title_backround" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -62,6 +55,7 @@
                     android:layoutDirection="ltr"
                     android:paddingStart="3dp"
                     android:text="@string/type"
+                    android:textColor="@android:color/background_light"
                     android:textDirection="ltr" />
 
                 <HorizontalScrollView
@@ -159,6 +153,7 @@
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
                     android:text="Size: Small"
+                    android:textColor="@android:color/background_light"
                     android:textDirection="ltr" />
 
                 <LinearLayout
@@ -216,6 +211,7 @@
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
                     android:text="Milk: No Milk"
+                    android:textColor="@android:color/background_light"
                     android:textDirection="ltr" />
 
                 <LinearLayout
@@ -328,6 +324,7 @@
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
                     android:text="Sugar: No Sugar"
+                    android:textColor="@android:color/background_light"
                     android:textDirection="ltr" />
 
                 <HorizontalScrollView
@@ -421,6 +418,7 @@
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
                     android:text="Intensity: Regular"
+                    android:textColor="@android:color/background_light"
                     android:textDirection="ltr" />
 
                 <LinearLayout
@@ -497,8 +495,8 @@
                     <Button
                         android:id="@+id/make_order"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#5A3D1C"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/order_button_backround"
                         android:layoutDirection="ltr"
                         android:onClick="sendOrder"
                         android:padding="10dp"
