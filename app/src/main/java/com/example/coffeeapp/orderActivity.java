@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 //import android.widget.Toast;
@@ -18,11 +19,12 @@ public class orderActivity extends AppCompatActivity {
     private ImageView selected_sugar;
     private ImageView selected_size;
     private Button make_order_button;
-
-    private String type_string;
+    private ImageView selected_intensity;
+    private TextView set_title;
+    private String type_string = "No Choice";
     private String size_string = "Small";
     private String sugar_string = "No";
-    private int temp_int;
+    private String intensity_string = "Regular";
 
 
     @Override
@@ -53,8 +55,10 @@ public class orderActivity extends AppCompatActivity {
                 type_string = "Latte";
                 break;
         }
+        set_title = findViewById(R.id.coffee_type_title);
+        set_title.setText("Type: " + type_string);
         make_order_button = (Button) findViewById(R.id.make_order);
-        make_order_button.setEnabled(true);
+       // make_order_button.setEnabled(true);
 
     }
 
@@ -87,6 +91,16 @@ public class orderActivity extends AppCompatActivity {
         selected_sugar.setImageResource(R.drawable.sugar_3_bw);
     }
 
+    public void intesityChoiseReset() {
+        selected_sugar = (ImageView) findViewById(R.id.decaff);
+        selected_sugar.setImageResource(R.drawable.no_sugar_bw);
+        selected_sugar = (ImageView) findViewById(R.id.one_caff);
+        selected_sugar.setImageResource(R.drawable.coffee_strength_1_bw);
+        selected_sugar = (ImageView) findViewById(R.id.two_caff);
+        selected_sugar.setImageResource(R.drawable.coffee_strength_2_bw);
+        selected_sugar = (ImageView) findViewById(R.id.three_caff);
+        selected_sugar.setImageResource(R.drawable.coffee_strength_3_bw);
+    }
 
     public void sugarChoice(View view) {
         sugarChoiceReset();
@@ -94,21 +108,23 @@ public class orderActivity extends AppCompatActivity {
         switch (view.getId()) {
             case (R.id.no_sugar):
                 selected_sugar.setImageResource(R.drawable.no_sugar_red);
-                sugar_string = "no";
+                sugar_string = "No";
                 break;
             case (R.id.one_sugar):
                 selected_sugar.setImageResource(R.drawable.sugar_1_color);
-                sugar_string = "one";
+                sugar_string = "One";
                 break;
             case (R.id.two_sugar):
                 selected_sugar.setImageResource(R.drawable.sugar_2_color);
-                sugar_string = "two";
+                sugar_string = "Two";
                 break;
             case (R.id.three_sugar):
                 selected_sugar.setImageResource(R.drawable.sugar_3_color);
-                sugar_string = "three";
+                sugar_string = "Three";
                 break;
         }
+        set_title = findViewById(R.id.sugar_title);
+        set_title.setText("Sugar: " + sugar_string);
     }
 
 
@@ -132,6 +148,8 @@ public class orderActivity extends AppCompatActivity {
                     selected_milk = "Almonds Milk";
                 break;
         }
+        set_title = findViewById(R.id.milk_type_title);
+        set_title.setText("Milk: " + selected_milk);
     }
 
     public void sizeChoice(View view) {
@@ -147,15 +165,48 @@ public class orderActivity extends AppCompatActivity {
                 size_string = "Large";
                 break;
         }
+        set_title = findViewById(R.id.size_title);
+        set_title.setText("Size: " + size_string);
     }
 
     public void sendOrder(View view) {
-        Intent intent = new Intent(this, checkOut.class);
-        intent.putExtra("type", type_string);
-        intent.putExtra("milk", selected_milk);
-        intent.putExtra("size", size_string);
-        intent.putExtra("sugar", sugar_string);
-        intent.putExtra("temp", temp_int);
-        startActivity(intent);
+        if (type_string.equals("No Choice"))
+            Toast.makeText(this, "Please select coffee type first", Toast.LENGTH_LONG).show();
+        else {
+            /*Intent intent = new Intent(this, checkOut.class);
+            intent.putExtra("type", type_string);
+            intent.putExtra("milk", selected_milk);
+            intent.putExtra("size", size_string);
+            intent.putExtra("sugar", sugar_string);
+         //   intent.putExtra("temp", temp_int);
+           // startActivity(intent);*/
+            Toast.makeText(this, "Order Sent!", Toast.LENGTH_LONG).show();
+        }
+        }
+
+
+    public void intensityChoice(View view) {
+        intesityChoiseReset();
+        selected_intensity = (ImageView) findViewById(view.getId());
+        switch (view.getId()) {
+            case (R.id.decaff):
+                selected_intensity.setImageResource(R.drawable.no_sugar_red);
+                intensity_string = "Decaff";
+                break;
+            case (R.id.one_caff):
+                selected_intensity.setImageResource(R.drawable.coffee_strength_1_color);
+                intensity_string = "Regular";
+                break;
+            case (R.id.two_caff):
+                selected_intensity.setImageResource(R.drawable.coffee_strength_2_color);
+                intensity_string = "Double";
+                break;
+            case (R.id.three_caff):
+                selected_intensity.setImageResource(R.drawable.coffee_strength_3_color);
+                intensity_string = "Triple";
+                break;
+        }
+        set_title = findViewById(R.id.intesity_title);
+        set_title.setText("Intensity: " + intensity_string);
     }
 }
