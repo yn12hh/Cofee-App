@@ -1,17 +1,21 @@
 package com.example.coffeeapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class checkOut extends AppCompatActivity {
 
     private TextView locationInput;
     private TextView timeInput;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,8 @@ public class checkOut extends AppCompatActivity {
         temp.setText(intent.getStringExtra("temp"));
         locationInput = findViewById(R.id.location_input);
         timeInput = findViewById(R.id.time_input);
+
+        timeInput.setText(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + ":" +Calendar.getInstance().get(Calendar.MINUTE));
     }
     public void finishOrder(View view) {
         Intent intent = new Intent(this, endScreen.class);
