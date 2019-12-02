@@ -1,21 +1,33 @@
 package com.example.coffeeapp;
 
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import android.app.AlertDialog;
+import android.widget.TimePicker;
 
-public class checkOut extends AppCompatActivity {
+import java.text.SimpleDateFormat;
+
+
+public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 
     private TextView locationInput;
-    private TextView timeInput;
-
+    private Button timeInput;
+    private Date now =  new Date();
+    private SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
+    private final Calendar c = Calendar.getInstance();
+    private int orderHour = c.get(Calendar.HOUR_OF_DAY);
+    private int orderMinute = c.get(Calendar.MINUTE);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +47,14 @@ public class checkOut extends AppCompatActivity {
         temp.setText(intent.getStringExtra("temp"));
         locationInput = findViewById(R.id.location_input);
         timeInput = findViewById(R.id.time_input);
-
-        timeInput.setText(Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + ":" +Calendar.getInstance().get(Calendar.MINUTE));
+        timeInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment timePicker = new TimePickerFragment();
+                timePicker.show(getSupportFragmentManager(),"time picker");
+            }
+        });
+        timeInput.setText("now - " + timeFormat.format(now) + " (tap to edit)");
     }
     public void finishOrder(View view) {
         Intent intent = new Intent(this, endScreen.class);
@@ -45,4 +63,26 @@ public class checkOut extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void pickTime(View view) {
+        AlertDialog.Builder myAlertBuilder = new
+                AlertDialog.Builder(checkOut.this);
+        myAlertBuilder.setTitle("Alert");
+        myAlertBuilder.setMessage("Click OK to continue, or Cancel to stop:");
+
+    }
+
+    @Override
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+        String orderTime = "";
+        orderHour = hourOfDay;
+        orderMinute = minute;
+        if(orderHour < 10)
+            orderTime += "0";
+        orderTime += orderHour;
+        orderTime += ":";
+        if(orderMinute < 10)
+            orderTime += "0";
+        orderTime += orderMinute;
+        timeInput.setText(orderTime);
+    }
 }
