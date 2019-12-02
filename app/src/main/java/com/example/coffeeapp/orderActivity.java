@@ -173,13 +173,13 @@ public class orderActivity extends AppCompatActivity {
         if (type_string.equals("No Choice"))
             Toast.makeText(this, "Please select coffee type first", Toast.LENGTH_LONG).show();
         else {
-            /*Intent intent = new Intent(this, checkOut.class);
+            Intent intent = new Intent(this, checkOut.class);
             intent.putExtra("type", type_string);
             intent.putExtra("milk", selected_milk);
             intent.putExtra("size", size_string);
             intent.putExtra("sugar", sugar_string);
-         //   intent.putExtra("temp", temp_int);
-           // startActivity(intent);*/
+            intent.putExtra("intensity", intensity_string);
+            startActivity(intent);
             Toast.makeText(this, "Order Sent!", Toast.LENGTH_LONG).show();
         }
         }

@@ -21,5 +21,8 @@
     <string name="sugar">Sugar</string>
     <string name="milk">Milk</string>
     <string name="temperature">Temperature</string>
+    <string name="applogo">app logo</string>
+    <string name="your_usual">your usual?</string>
+    <string name="type">type</string>
 
 </resources>

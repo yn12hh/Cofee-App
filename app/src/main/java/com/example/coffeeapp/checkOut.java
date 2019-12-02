@@ -39,12 +39,12 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
         TextView size = findViewById(R.id.user_size);
         TextView milk = findViewById(R.id.user_milk);
         TextView sugar = findViewById(R.id.user_sugar);
-        TextView temp = findViewById(R.id.user_temp);
+        TextView temp = findViewById(R.id.user_intensity);
         type.setText(intent.getStringExtra("type"));
         size.setText(intent.getStringExtra("size"));
         milk.setText(intent.getStringExtra("milk"));
         sugar.setText(intent.getStringExtra("sugar"));
-        temp.setText(intent.getStringExtra("temp"));
+        temp.setText(intent.getStringExtra("intensity"));
         locationInput = findViewById(R.id.location_input);
         timeInput = findViewById(R.id.time_input);
         timeInput.setOnClickListener(new View.OnClickListener() {
