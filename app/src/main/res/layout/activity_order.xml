@@ -19,7 +19,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="617dp"
         android:layoutDirection="ltr"
         android:textDirection="ltr">
 
@@ -495,7 +495,7 @@
                     <Button
                         android:id="@+id/make_order"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="91dp"
                         android:background="@drawable/order_button_backround"
                         android:layoutDirection="ltr"
                         android:onClick="sendOrder"
