@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".checkOut">
 
+
     <TextView
         android:id="@+id/your_order_textView"
         android:layout_width="wrap_content"
@@ -19,7 +20,7 @@
         android:id="@+id/your_order_textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="Where To?"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,10 +30,11 @@
         android:id="@+id/your_order_textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="When?"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plain_text_input" />
+        app:layout_constraintTop_toBottomOf="@+id/location_input" />
 
     <TextView
         android:id="@+id/text_order"
@@ -120,7 +122,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Temp"
+        android:text="Intensity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sugar_title" />
 
@@ -150,20 +152,37 @@
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="finishOrder"
         android:text="OK GO!"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_input" />
 
     <EditText
-        android:id="@+id/plain_text_input"
+        android:id="@+id/location_input"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:inputType="text"
+        android:inputType="textPostalAddress"
+        android:hint="your current location (tap to edit)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/your_order_textView2" />
+
+    <Button
+        android:id="@+id/time_input"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_order_textView3" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
