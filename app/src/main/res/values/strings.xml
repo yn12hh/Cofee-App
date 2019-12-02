@@ -21,4 +21,7 @@
     <string name="sugar">Sugar</string>
     <string name="milk">Milk</string>
     <string name="temperature">Temperature</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
