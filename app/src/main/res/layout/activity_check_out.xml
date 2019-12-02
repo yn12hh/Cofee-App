@@ -11,18 +11,159 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/your_order"
-        android:textSize="40sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_order"
+        android:id="@+id/your_order_textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Where To?"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp_title" />
+
+    <TextView
+        android:id="@+id/your_order_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="When?"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plain_text_input" />
+
+    <TextView
+        android:id="@+id/text_order"
+        android:layout_width="1dp"
+        android:layout_height="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_order_textView" />
+
+    <TextView
+        android:id="@+id/type_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Type"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/your_order_textView" />
+
+    <TextView
+        android:id="@+id/user_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/type_text"
+        app:layout_constraintTop_toBottomOf="@+id/your_order_textView" />
+
+    <TextView
+        android:id="@+id/size_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_text" />
+
+    <TextView
+        android:id="@+id/user_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toEndOf="@+id/size_title"
+        app:layout_constraintStart_toStartOf="@+id/user_type"
+        app:layout_constraintTop_toBottomOf="@+id/type_text" />
+
+    <TextView
+        android:id="@+id/milk_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Milk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size_title" />
+
+    <TextView
+        android:id="@+id/user_milk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toEndOf="@+id/milk_title"
+        app:layout_constraintStart_toStartOf="@+id/user_size"
+        app:layout_constraintTop_toBottomOf="@+id/user_size" />
+
+    <TextView
+        android:id="@+id/sugar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Sugar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/milk_title" />
+
+    <TextView
+        android:id="@+id/temp_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sugar_title" />
+
+    <TextView
+        android:id="@+id/user_sugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toEndOf="@+id/sugar_title"
+        app:layout_constraintStart_toStartOf="@+id/user_milk"
+        app:layout_constraintTop_toBottomOf="@+id/user_milk" />
+
+    <TextView
+        android:id="@+id/user_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toEndOf="@+id/temp_title"
+        app:layout_constraintStart_toStartOf="@+id/user_sugar"
+        app:layout_constraintTop_toBottomOf="@+id/user_sugar" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="OK GO!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/plain_text_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_order_textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
