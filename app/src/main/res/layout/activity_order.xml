@@ -20,14 +20,15 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="617dp"
+        android:layout_height="match_parent"
         android:layoutDirection="ltr"
+        android:scrollbarStyle="insideInset"
         android:textDirection="ltr">
 
         <LinearLayout
             android:id="@+id/order_options_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:clipToPadding="false"
             android:divider="@drawable/divider"
             android:dividerPadding="10dp"
@@ -484,30 +485,32 @@
                         app:srcCompat="@drawable/coffee_strength_3_bw" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/order_finish_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layoutDirection="ltr"
-                    android:orientation="vertical"
-                    android:textDirection="ltr">
 
-                    <Button
-                        android:id="@+id/make_order"
-                        android:layout_width="match_parent"
-                        android:layout_height="91dp"
-                        android:background="@drawable/order_button_backround"
-                        android:layoutDirection="ltr"
-                        android:onClick="sendOrder"
-                        android:padding="10dp"
-                        android:paddingTop="50dp"
-                        android:paddingBottom="50dp"
-                        android:text="@string/make_an_order"
-                        android:textColor="@android:color/background_light"
-                        android:textDirection="ltr"
-                        android:textSize="26sp" />
-                </LinearLayout>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/order_finish_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layoutDirection="ltr"
+                android:orientation="vertical"
+                android:textDirection="ltr">
+
+                <Button
+                    android:id="@+id/make_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="104dp"
+                    android:background="@drawable/order_button_backround"
+                    android:enabled="true"
+                    android:layoutDirection="ltr"
+                    android:onClick="sendOrder"
+                    android:text="@string/make_an_order"
+                    android:textColor="@android:color/background_light"
+                    android:textDirection="ltr"
+                    android:textSize="26sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 
