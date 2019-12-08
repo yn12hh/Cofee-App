@@ -7,44 +7,64 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/logo_imageView"
-        android:layout_width="277dp"
-        android:layout_height="223dp"
-        android:layout_marginTop="108dp"
+        android:id="@+id/imageView"
+        android:layout_width="418dp"
+        android:layout_height="301dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/welcome_image" />
+
+    <ImageView
+        android:id="@+id/welcome_divider"
+        android:layout_width="446dp"
+        android:layout_height="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/logo_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/line_welcome" />
+
+    <ImageView
+        android:id="@+id/logo_imageView"
+        android:layout_width="127dp"
+        android:layout_height="114dp"
         android:contentDescription="@string/applogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:srcCompat="@drawable/app_logo" />
 
     <Button
         android:id="@+id/usual_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#5A4625"
+        android:layout_width="193dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button_take_an_order"
         android:onClick="usualOrder"
         android:padding="10dp"
-        android:text="@string/your_usual"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/good_day"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-    <TextView
-        android:id="@+id/good_day"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/good_day"
-        android:textSize="18sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="158dp"
+        android:layout_height="34dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_imageView"
+        app:srcCompat="@drawable/welcome_back" />
 
     <Button
         android:id="@+id/button2"
