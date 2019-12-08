@@ -25,6 +25,7 @@ public class orderActivity extends AppCompatActivity {
     private String size_string = "Small";
     private String sugar_string = "No";
     private String intensity_string = "Regular";
+    private ImageView selected_milk_img;
 
 
     @Override
@@ -59,7 +60,9 @@ public class orderActivity extends AppCompatActivity {
         set_title.setText("Type: " + type_string);
         make_order_button = (Button) findViewById(R.id.make_order);
        // make_order_button.setEnabled(true);
+        make_order_button.setBackgroundResource(R.drawable.order_button_backround_color
 
+        );
     }
 
     public void coffeeChoiceReset() {
@@ -79,10 +82,19 @@ public class orderActivity extends AppCompatActivity {
         selected_size = (ImageView) findViewById(R.id.large_size);
         selected_size.setImageResource(R.drawable.size_l_bw);
     }
-
+    public void milkChoiceReset() {
+        selected_milk_img = (ImageView) findViewById(R.id.no_milk);
+        selected_milk_img.setImageResource(R.drawable.no_bw);
+        selected_milk_img = (ImageView) findViewById(R.id.cow_milk);
+        selected_milk_img.setImageResource(R.drawable.no_bw);
+        selected_milk_img = (ImageView) findViewById(R.id.soy_milk);
+        selected_milk_img.setImageResource(R.drawable.no_bw);
+        selected_milk_img = (ImageView) findViewById(R.id.almonds_milk);
+        selected_milk_img.setImageResource(R.drawable.no_bw);
+    }
     public void sugarChoiceReset() {
         selected_sugar = (ImageView) findViewById(R.id.no_sugar);
-        selected_sugar.setImageResource(R.drawable.no_sugar_bw);
+        selected_sugar.setImageResource(R.drawable.no_bw);
         selected_sugar = (ImageView) findViewById(R.id.one_sugar);
         selected_sugar.setImageResource(R.drawable.sugar_1_bw);
         selected_sugar = (ImageView) findViewById(R.id.two_sugar);
@@ -91,15 +103,13 @@ public class orderActivity extends AppCompatActivity {
         selected_sugar.setImageResource(R.drawable.sugar_3_bw);
     }
 
-    public void intesityChoiseReset() {
+    public void intensityChoiceReset() {
         selected_sugar = (ImageView) findViewById(R.id.decaff);
-        selected_sugar.setImageResource(R.drawable.no_sugar_bw);
+        selected_sugar.setImageResource(R.drawable.no_bw);
         selected_sugar = (ImageView) findViewById(R.id.one_caff);
-        selected_sugar.setImageResource(R.drawable.coffee_strength_1_bw);
+        selected_sugar.setImageResource(R.drawable.regular_intesity_bw);
         selected_sugar = (ImageView) findViewById(R.id.two_caff);
-        selected_sugar.setImageResource(R.drawable.coffee_strength_2_bw);
-        selected_sugar = (ImageView) findViewById(R.id.three_caff);
-        selected_sugar.setImageResource(R.drawable.coffee_strength_3_bw);
+        selected_sugar.setImageResource(R.drawable.double_intensity_bw);
     }
 
     public void sugarChoice(View view) {
@@ -107,8 +117,8 @@ public class orderActivity extends AppCompatActivity {
         selected_sugar = (ImageView) findViewById(view.getId());
         switch (view.getId()) {
             case (R.id.no_sugar):
-                selected_sugar.setImageResource(R.drawable.no_sugar_red);
-                sugar_string = "No";
+                selected_sugar.setImageResource(R.drawable.no_color);
+                sugar_string = "No Sugar";
                 break;
             case (R.id.one_sugar):
                 selected_sugar.setImageResource(R.drawable.sugar_1_color);
@@ -128,24 +138,26 @@ public class orderActivity extends AppCompatActivity {
     }
 
 
-    public void milkRadioChoice(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
+    public void milkChoice(View view) {
+        milkChoiceReset();
+        selected_milk_img = (ImageView) findViewById(view.getId());
         switch (view.getId()) {
-            case R.id.no_milk_radio:
-                if (checked)
-                    selected_milk = "No Milk";
+
+            case (R.id.no_milk):
+                selected_milk_img.setImageResource(R.drawable.no_color);
+                selected_milk = "No Milk";
                 break;
-            case R.id.soy_milk_radio:
-                if (checked)
-                    selected_milk = "Soy Milk";
+            case (R.id.soy_milk):
+                selected_milk_img.setImageResource(R.drawable.no_color);
+                selected_milk = "Soy Milk";
                 break;
-            case R.id.cow_milk_radio:
-                if (checked)
-                    selected_milk = "Cow Milk";
+            case (R.id.cow_milk):
+                selected_milk_img.setImageResource(R.drawable.no_color);
+                selected_milk = "Cow Milk";
                 break;
-            case R.id.almond_milk_radio:
-                if (checked)
-                    selected_milk = "Almonds Milk";
+            case (R.id.almonds_milk):
+                selected_milk_img.setImageResource(R.drawable.no_color);
+                selected_milk = "Almonds Milk";
                 break;
         }
         set_title = findViewById(R.id.milk_type_title);
@@ -186,24 +198,20 @@ public class orderActivity extends AppCompatActivity {
 
 
     public void intensityChoice(View view) {
-        intesityChoiseReset();
+        intensityChoiceReset();
         selected_intensity = (ImageView) findViewById(view.getId());
         switch (view.getId()) {
             case (R.id.decaff):
-                selected_intensity.setImageResource(R.drawable.no_sugar_red);
+                selected_intensity.setImageResource(R.drawable.no_color);
                 intensity_string = "Decaff";
                 break;
             case (R.id.one_caff):
-                selected_intensity.setImageResource(R.drawable.coffee_strength_1_color);
+                selected_intensity.setImageResource(R.drawable.regular_intesity_color);
                 intensity_string = "Regular";
                 break;
             case (R.id.two_caff):
-                selected_intensity.setImageResource(R.drawable.coffee_strength_2_color);
+                selected_intensity.setImageResource(R.drawable.double_intensity_color);
                 intensity_string = "Double";
-                break;
-            case (R.id.three_caff):
-                selected_intensity.setImageResource(R.drawable.coffee_strength_3_color);
-                intensity_string = "Triple";
                 break;
         }
         set_title = findViewById(R.id.intesity_title);
