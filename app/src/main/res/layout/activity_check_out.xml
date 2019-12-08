@@ -8,27 +8,27 @@
     tools:context=".checkOut">
 
 
+    <ImageView
+        android:id="@+id/check_out_title"
+        android:layout_width="398dp"
+        android:layout_height="45dp"
+        android:padding="3dp"
+        app:srcCompat="@drawable/checkout_title" />
+
+    <ImageView
+        android:id="@+id/checkout_title_underline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/line_welcome" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="519dp">
+        android:layout_height="556dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/check_out_title"
-                android:layout_width="398dp"
-                android:layout_height="45dp"
-                android:padding="3dp"
-                app:srcCompat="@drawable/checkout_title" />
-
-            <ImageView
-                android:id="@+id/checkout_title_underline"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/line_welcome" />
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -164,11 +164,19 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/checkout_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                app:srcCompat="@drawable/divider" />
+
+            <ImageView
                 android:id="@+id/buildings"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="15dp"
                 android:scaleType="fitStart"
                 app:srcCompat="@drawable/buldings" />
 
@@ -179,14 +187,6 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/send_to" />
-
-            <ImageView
-                android:id="@+id/checkout_divider"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                app:srcCompat="@drawable/divider" />
 
             <EditText
                 android:id="@+id/location_input"
@@ -206,6 +206,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
                 android:scaleType="fitStart"
                 app:srcCompat="@drawable/clock" />
 
@@ -227,7 +228,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="73dp"
         android:onClick="finishOrder"
         android:text="OK GO!"
         android:textSize="24sp" />
