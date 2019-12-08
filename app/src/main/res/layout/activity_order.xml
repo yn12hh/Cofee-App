@@ -14,8 +14,10 @@
 
     <ImageView
         android:id="@+id/order_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="371dp"
+        android:layout_height="47dp"
+        android:layout_gravity="center"
+        android:layout_margin="2dp"
         android:paddingStart="7dp"
         android:paddingEnd="7dp"
         app:srcCompat="@drawable/order_title_backround" />
@@ -28,7 +30,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="470dp"
+        android:layout_height="554dp"
         android:layoutDirection="ltr"
         android:scrollbarStyle="insideInset"
         android:textDirection="ltr">
@@ -228,8 +230,8 @@
                     android:layout_gravity="center_horizontal"
                     android:layoutDirection="ltr"
                     android:orientation="horizontal"
-                    android:textDirection="ltr"
-                    android:paddingStart="20dp">
+                    android:paddingStart="20dp"
+                    android:textDirection="ltr">
 
                     <ImageView
                         android:id="@+id/no_milk"
@@ -450,12 +452,12 @@
     <Button
         android:id="@+id/make_order"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="@drawable/order_button_backround"
         android:enabled="true"
         android:layoutDirection="ltr"
         android:onClick="sendOrder"
-        android:text="@string/make_an_order"
+        android:text="Done"
         android:textColor="@android:color/background_light"
         android:textDirection="ltr"
         android:textSize="26sp"
