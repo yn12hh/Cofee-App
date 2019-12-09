@@ -47,18 +47,21 @@ public class registration extends AppCompatActivity {
         infoEdit.putString("Phone Number", userPhone.getText().toString());
         infoEdit.putString("User ID", userID.getText().toString());
         infoEdit.putString("User Name", userNickname.getText().toString());
-        infoEdit.putBoolean("Registered",true);
+        infoEdit.putBoolean("Registered",!anyFiledNotFiled());
         infoEdit.apply();
     }
 
 
     public void finishRegestration (View view) {
-        if(userNickname.getText().toString().isEmpty() || userPhone.getText().toString().isEmpty() || userID.getText().toString().isEmpty()) {
+        if(anyFiledNotFiled()) {
             Toast.makeText(this, "Please enter your info before placing an order", Toast.LENGTH_LONG).show();
         }
         else {
             finish();
         }
+    }
+    public boolean anyFiledNotFiled(){
+        return userNickname.getText().toString().isEmpty() || userPhone.getText().toString().isEmpty() || userID.getText().toString().isEmpty();
     }
 
 }
