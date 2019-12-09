@@ -27,5 +27,6 @@
     <string name="type">Type</string>
     <string name="backrounds_lines">backround_lines</string>
     <string name="line_done">line_done</string>
+    <string name="registration_button_text">registration</string>
 
 </resources>
