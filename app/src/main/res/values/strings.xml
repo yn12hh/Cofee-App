@@ -51,5 +51,6 @@
     <string name="at">At:</string>
     <string name="send_to">Send To:</string>
     <string name="your_order_title_checkout">Your Order:</string>
+    <string name="type_select_prompt_message">Type: Please Select</string>
 
 </resources>
