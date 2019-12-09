@@ -3,11 +3,13 @@ package com.example.coffeeapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,16 +17,16 @@ import android.widget.Toast;
 
 public class orderActivity extends AppCompatActivity {
     private ImageView selected_coffee;
-    private String selected_milk = "No milk";
+    private String selected_milk;
     private ImageView selected_sugar;
     private ImageView selected_size;
     private Button make_order_button;
     private ImageView selected_intensity;
     private TextView set_title;
-    private String type_string = "No Choice";
-    private String size_string = "Small";
-    private String sugar_string = "No";
-    private String intensity_string = "Regular";
+    private String type_string;
+    private String size_string;
+    private String sugar_string;
+    private String intensity_string;
     private ImageView selected_milk_img;
 
 
@@ -32,6 +34,111 @@ public class orderActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+        loadMilkChoice();
+        loadCoffeeType();
+        loadCoffeeSize();
+        loadSugarChoice();
+        loadIntensityChoice();
+    }
+
+    private void loadIntensityChoice() {
+        SharedPreferences shared_intensity = getSharedPreferences("OrderInfo", MODE_PRIVATE);
+        intensity_string = shared_intensity.getString("INTENSITY", "Regular");
+        switch (intensity_string) {
+            case ("Decaff"):
+                intensityChoice(findViewById(R.id.decaff));
+                break;
+            case ("Regular"):
+                intensityChoice(findViewById(R.id.one_caff));
+                break;
+            case ("Double"):
+                intensityChoice(findViewById(R.id.two_caff));
+                break;
+        }
+    }
+
+    private void loadSugarChoice() {
+        SharedPreferences shared_sugar = getSharedPreferences("OrderInfo", MODE_PRIVATE);
+        sugar_string = shared_sugar.getString("SUGAR", "No Sugar");
+        switch (sugar_string) {
+            case ("No Sugar"):
+                sugarChoice(findViewById(R.id.no_sugar));
+                break;
+            case ("One"):
+                sugarChoice(findViewById(R.id.one_sugar));
+                break;
+            case ("Two"):
+                sugarChoice(findViewById(R.id.two_sugar));
+                break;
+            case ("Three"):
+                sugarChoice(findViewById(R.id.three_sugar));
+                break;
+        }
+    }
+
+    private void loadCoffeeSize() {
+        SharedPreferences shared_size = getSharedPreferences("OrderInfo", MODE_PRIVATE);
+        size_string = shared_size.getString("SIZE", "Small");
+        switch (size_string) {
+            case ("Small"):
+                sizeChoice(findViewById(R.id.small_size));
+                break;
+            case ("Large"):
+                sizeChoice(findViewById(R.id.large_size));
+                break;
+        }
+    }
+
+    private void loadCoffeeType() {
+        SharedPreferences shared_type = getSharedPreferences("OrderInfo", MODE_PRIVATE);
+        type_string = shared_type.getString("TYPE", "No Choice");
+        switch (type_string) {
+            case ("Americano"):
+                coffeeChoice(findViewById(R.id.amricano));
+                break;
+            case ("Cappuccino"):
+                coffeeChoice(findViewById(R.id.cappuchino));
+                break;
+            case ("Espresso"):
+                coffeeChoice(findViewById(R.id.essprersso));
+                break;
+            case ("Latte"):
+                coffeeChoice(findViewById(R.id.latte));
+                break;
+        }
+
+    }
+
+    private void loadMilkChoice() {
+        SharedPreferences shared_milk = getSharedPreferences("OrderInfo", MODE_PRIVATE);
+        selected_milk = shared_milk.getString("MILK", "No Milk");
+        switch (selected_milk){
+            case ("No Milk"):
+                milkChoice(findViewById(R.id.no_milk));
+                break;
+            case ("Soy Milk"):
+                milkChoice(findViewById(R.id.soy_milk));
+                break;
+            case ("Cow Milk"):
+                milkChoice(findViewById(R.id.cow_milk));
+                break;
+            case ("Almonds Milk"):
+                milkChoice(findViewById(R.id.almonds_milk));
+                break;
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences Sharedonpause = getSharedPreferences("OrderInfo", MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = Sharedonpause.edit();
+        myEdit.putString("SIZE", size_string);
+        myEdit.putString("MILK", selected_milk);
+        myEdit.putString("TYPE", type_string);
+        myEdit.putString("SUGAR", sugar_string);
+        myEdit.putString("INTENSITY", intensity_string);
+        myEdit.apply();
     }
 
 
@@ -59,7 +166,7 @@ public class orderActivity extends AppCompatActivity {
         set_title = findViewById(R.id.coffee_type_title);
         set_title.setText("Type: " + type_string);
         make_order_button = (Button) findViewById(R.id.make_order);
-       // make_order_button.setEnabled(true);
+        // make_order_button.setEnabled(true);
         make_order_button.setBackgroundResource(R.drawable.order_button_backround_color
 
         );
@@ -194,7 +301,7 @@ public class orderActivity extends AppCompatActivity {
             startActivity(intent);
             Toast.makeText(this, "Order Sent!", Toast.LENGTH_LONG).show();
         }
-        }
+    }
 
 
     public void intensityChoice(View view) {
