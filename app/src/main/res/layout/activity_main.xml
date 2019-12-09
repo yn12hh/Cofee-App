@@ -74,11 +74,10 @@
         android:background="#00927E7E"
         android:gravity="center"
         android:onClick="registerNow"
-        android:text="Personal Info"
+        android:text="@string/personal_info"
         android:textAlignment="center"
         android:textColor="#636161"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Personal Info" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
