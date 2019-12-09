@@ -15,13 +15,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+
 public class registration extends AppCompatActivity {
 
     private EditText userNickname;
     private EditText userPhone;
     private EditText userID;
-
-    private SharedPreferences mPreferences;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
