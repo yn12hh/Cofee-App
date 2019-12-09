@@ -12,7 +12,6 @@
         <activity android:name=".registration"></activity>
         <activity android:name=".endScreen" />
         <activity android:name=".checkOut" />
-        <activity android:name=".menuActivity" />
         <activity android:name=".orderActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
