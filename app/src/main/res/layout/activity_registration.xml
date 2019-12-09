@@ -7,12 +7,12 @@
     tools:context=".registration">
 
     <TextView
-        android:id="@+id/name_title"
+        android:id="@+id/name_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:text="Name:"
+        android:text="@string/name_field"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registration_title" />
@@ -23,23 +23,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="enter your nickname"
+        android:hint="@string/enter_your_nickname_message"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/name_title"
-        app:layout_constraintTop_toTopOf="@+id/name_title" />
+        app:layout_constraintStart_toEndOf="@+id/name_field"
+        app:layout_constraintTop_toTopOf="@+id/name_field" />
 
     <TextView
-        android:id="@+id/phone_title"
+        android:id="@+id/phone_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:text="Phone:"
+        android:text="@string/phone_field"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_title" />
+        app:layout_constraintTop_toBottomOf="@+id/name_field" />
 
     <EditText
         android:id="@+id/user_phone"
@@ -47,23 +47,23 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="enter your phone number"
+        android:hint="@string/enter_your_phone_number_message_blank_message"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/phone_title"
-        app:layout_constraintTop_toTopOf="@+id/phone_title" />
+        app:layout_constraintStart_toEndOf="@+id/phone_field"
+        app:layout_constraintTop_toTopOf="@+id/phone_field" />
 
     <TextView
-        android:id="@+id/employeeID_title"
+        android:id="@+id/employeeID_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:text="EmployeeID:"
+        android:text="@string/employeeid_field"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone_title" />
+        app:layout_constraintTop_toBottomOf="@+id/phone_field" />
 
     <EditText
         android:id="@+id/user_employeeID"
@@ -71,19 +71,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:hint="enter your Gindi employee ID"
+        android:hint="@string/employeeid_field_blank_message"
         android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/employeeID_title"
-        app:layout_constraintTop_toTopOf="@+id/employeeID_title" />
+        app:layout_constraintStart_toEndOf="@+id/employeeID_field"
+        app:layout_constraintTop_toTopOf="@+id/employeeID_field" />
 
     <TextView
         android:id="@+id/registration_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Registration"
+        android:text="@string/registration_title"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,8 +96,8 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
         android:onClick="finishRegestration"
-        android:text="register"
+        android:text="@string/register_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/employeeID_title" />
+        app:layout_constraintTop_toBottomOf="@+id/employeeID_field" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
