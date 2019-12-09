@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     tools:context=".MainActivity">
 
     <ImageView
@@ -13,7 +14,7 @@
         android:layout_marginBottom="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -25,10 +26,10 @@
         android:layout_height="8dp"
         app:layout_constraintBottom_toTopOf="@+id/app_logo_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pouring_coffee_image"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/line_welcome" />
 
     <ImageView
@@ -55,27 +56,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome_back_mr_gindi_image" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome_name" />
 
-    <ImageView
-        android:id="@+id/welcome_back_mr_gindi_image"
-        android:layout_width="158dp"
-        android:layout_height="34dp"
+    <TextView
+        android:id="@+id/welcome_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_logo_image"
-        app:srcCompat="@drawable/welcome_back" />
+        app:layout_constraintTop_toBottomOf="@+id/app_logo_image" />
 
     <Button
         android:id="@+id/registration_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#5A4625"
+        android:background="#00927E7E"
+        android:gravity="center"
         android:onClick="registerNow"
-        android:text="@string/registration_button_text"
-        android:textColor="@android:color/background_light"
+        android:text="Personal Info"
+        android:textAlignment="center"
+        android:textColor="#636161"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Personal Info" />
 </androidx.constraintlayout.widget.ConstraintLayout>
