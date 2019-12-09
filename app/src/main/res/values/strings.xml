@@ -28,5 +28,13 @@
     <string name="backrounds_lines">backround_lines</string>
     <string name="line_done">line_done</string>
     <string name="registration_button_text">registration</string>
+    <string name="name_field">Name:</string>
+    <string name="enter_your_nickname_message">enter your nickname</string>
+    <string name="enter_your_phone_number_message_blank_message">enter your phone number</string>
+    <string name="phone_field">Phone:</string>
+    <string name="employeeid_field">EmployeeID:</string>
+    <string name="employeeid_field_blank_message">enter your Gindi employee ID</string>
+    <string name="registration_title">Registration</string>
+    <string name="register_text">register</string>
 
 </resources>
