@@ -41,10 +41,7 @@
     <string name="sugar_no_sugar">Sugar: No Sugar</string>
     <string name="milk_no_milk">Milk: No Milk</string>
     <string name="size_small">Size: Small</string>
-    <string name="type">Type</string>
     <string name="size">Size</string>
-    <string name="milk">Milk</string>
-    <string name="sugar">Sugar</string>
     <string name="intensity">Intensity</string>
     <string name="hint_location_field">Your current location (tap to edit)</string>
 
