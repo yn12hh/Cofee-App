@@ -52,8 +52,8 @@ public class registration extends AppCompatActivity {
     }
 
 
-    public void finishRegestration (View view) {
-        if(anyFiledNotFiled()) {
+    public void finishRegestration (View view) {//this function is called when register is called
+        if(anyFiledNotFiled()) { // if the user hasn't registered the function demands a registration
             Toast.makeText(this, "Please enter your info before placing an order", Toast.LENGTH_LONG).show();
         }
         else {
