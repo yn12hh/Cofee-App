@@ -13,6 +13,7 @@ import androidx.fragment.app.DialogFragment;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
 import android.app.AlertDialog;
 import android.widget.TimePicker;
 
@@ -23,7 +24,7 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
 
     private TextView locationInput;
     private Button timeInput;
-    private Date now =  new Date();
+    private Date now = new Date();
     private SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
     private final Calendar c = Calendar.getInstance();
     private int orderHour = c.get(Calendar.HOUR_OF_DAY);
@@ -34,7 +35,6 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_out);
         Intent intent = getIntent();
-
         TextView type = findViewById(R.id.user_type);
         TextView size = findViewById(R.id.user_size);
         TextView milk = findViewById(R.id.user_milk);
@@ -51,12 +51,13 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
             @Override
             public void onClick(View v) {
                 DialogFragment timePicker = new TimePickerFragment();
-                timePicker.show(getSupportFragmentManager(),"time picker");
+                timePicker.show(getSupportFragmentManager(), "time picker");
             }
         });
         timeInput.setText("now - " + timeFormat.format(now) + " (tap to edit)");
     }
-    public void finishOrder(View view) {
+
+    public void finishOrder(View view) { //this function is called when clicking the OK Go button
         Intent intent = new Intent(this, endScreen.class);
         intent.putExtra("location", locationInput.getText().toString());
         intent.putExtra("time", timeInput.getText().toString());
@@ -68,11 +69,11 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
         String orderTime = "";
         orderHour = hourOfDay;
         orderMinute = minute;
-        if(orderHour < 10)
+        if (orderHour < 10)
             orderTime += "0";
         orderTime += orderHour;
         orderTime += ":";
-        if(orderMinute < 10)
+        if (orderMinute < 10)
             orderTime += "0";
         orderTime += orderMinute;
         timeInput.setText(orderTime);
