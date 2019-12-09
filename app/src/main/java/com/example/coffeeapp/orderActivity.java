@@ -122,7 +122,7 @@ public class orderActivity extends AppCompatActivity {
             case ("Cow Milk"):
                 milkChoice(findViewById(R.id.cow_milk));
                 break;
-            case ("Almonds Milk"):
+            case ("Almond Milk"):
                 milkChoice(findViewById(R.id.almonds_milk));
                 break;
         }
@@ -194,11 +194,11 @@ public class orderActivity extends AppCompatActivity {
         selected_milk_img = (ImageView) findViewById(R.id.no_milk);
         selected_milk_img.setImageResource(R.drawable.no_bw);
         selected_milk_img = (ImageView) findViewById(R.id.cow_milk);
-        selected_milk_img.setImageResource(R.drawable.no_bw);
+        selected_milk_img.setImageResource(R.drawable.regular_bw);
         selected_milk_img = (ImageView) findViewById(R.id.soy_milk);
-        selected_milk_img.setImageResource(R.drawable.no_bw);
+        selected_milk_img.setImageResource(R.drawable.soy_bw);
         selected_milk_img = (ImageView) findViewById(R.id.almonds_milk);
-        selected_milk_img.setImageResource(R.drawable.no_bw);
+        selected_milk_img.setImageResource(R.drawable.almond_bw);
     }
 
     public void sugarChoiceReset() {
@@ -257,16 +257,16 @@ public class orderActivity extends AppCompatActivity {
                 selected_milk = "No Milk";
                 break;
             case (R.id.soy_milk):
-                selected_milk_img.setImageResource(R.drawable.no_color);
+                selected_milk_img.setImageResource(R.drawable.soy_color);
                 selected_milk = "Soy Milk";
                 break;
             case (R.id.cow_milk):
-                selected_milk_img.setImageResource(R.drawable.no_color);
+                selected_milk_img.setImageResource(R.drawable.regular_color);
                 selected_milk = "Cow Milk";
                 break;
             case (R.id.almonds_milk):
-                selected_milk_img.setImageResource(R.drawable.no_color);
-                selected_milk = "Almonds Milk";
+                selected_milk_img.setImageResource(R.drawable.almond_color);
+                selected_milk = "Almond Milk";
                 break;
         }
         set_title = findViewById(R.id.milk_type_title);
@@ -301,7 +301,6 @@ public class orderActivity extends AppCompatActivity {
             intent.putExtra("sugar", sugar_string);
             intent.putExtra("intensity", intensity_string);
             startActivity(intent);
-            Toast.makeText(this, "Order Sent!", Toast.LENGTH_LONG).show();
         }
     }
 

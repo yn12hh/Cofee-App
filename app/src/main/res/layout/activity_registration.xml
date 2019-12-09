@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
     tools:context=".registration">
 
     <TextView
@@ -95,9 +97,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
+        android:background="#082A68"
         android:onClick="finishRegestration"
         android:text="@string/register_text"
+        android:textColor="?attr/colorBackgroundFloating"
+        android:textColorHighlight="?attr/colorBackgroundFloating"
+        android:textColorHint="?attr/colorBackgroundFloating"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/employeeID_field" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
