@@ -31,7 +31,27 @@ public class registration extends AppCompatActivity {
         userPhone = (EditText) findViewById(R.id.user_phone_number);
         userID = (EditText) findViewById(R.id.user_employeeID);
 
+        SharedPreferences user_info = getSharedPreferences("UserInfo", MODE_PRIVATE);
+
+        userNickname.setText(user_info.getString("User Name", ""));
+        userPhone.setText(user_info.getString("Phone Number", ""));
+        userID.setText(user_info.getString("User ID", ""));
+
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences user_info_on_pause = getSharedPreferences("UserInfo", MODE_PRIVATE);
+        SharedPreferences.Editor infoEdit = user_info_on_pause.edit();
+        infoEdit.putString("Phone Number", userPhone.getText().toString());
+        infoEdit.putString("User ID", userID.getText().toString());
+        infoEdit.putString("User Name", userNickname.getText().toString());
+        infoEdit.putBoolean("Registered",true);
+        infoEdit.apply();
+    }
+
+
     public void finishRegestration (View view) {
         if(userNickname.getText().toString().isEmpty() || userPhone.getText().toString().isEmpty() || userID.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please enter your info before placing an order", Toast.LENGTH_LONG).show();
