@@ -112,7 +112,7 @@ public class orderActivity extends AppCompatActivity {
     private void loadMilkChoice() {
         SharedPreferences shared_milk = getSharedPreferences("OrderInfo", MODE_PRIVATE);
         selected_milk = shared_milk.getString("MILK", "No Milk");
-        switch (selected_milk){
+        switch (selected_milk) {
             case ("No Milk"):
                 milkChoice(findViewById(R.id.no_milk));
                 break;
@@ -129,10 +129,10 @@ public class orderActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause() { //shared prefrences are created in order for the app to "remember" the user prefrences
         super.onPause();
-        SharedPreferences Sharedonpause = getSharedPreferences("OrderInfo", MODE_PRIVATE);
-        SharedPreferences.Editor myEdit = Sharedonpause.edit();
+        SharedPreferences shared_on_pause = getSharedPreferences("OrderInfo", MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = shared_on_pause.edit();
         myEdit.putString("SIZE", size_string);
         myEdit.putString("MILK", selected_milk);
         myEdit.putString("TYPE", type_string);
@@ -189,6 +189,7 @@ public class orderActivity extends AppCompatActivity {
         selected_size = (ImageView) findViewById(R.id.large_size);
         selected_size.setImageResource(R.drawable.size_l_bw);
     }
+
     public void milkChoiceReset() {
         selected_milk_img = (ImageView) findViewById(R.id.no_milk);
         selected_milk_img.setImageResource(R.drawable.no_bw);
@@ -199,6 +200,7 @@ public class orderActivity extends AppCompatActivity {
         selected_milk_img = (ImageView) findViewById(R.id.almonds_milk);
         selected_milk_img.setImageResource(R.drawable.no_bw);
     }
+
     public void sugarChoiceReset() {
         selected_sugar = (ImageView) findViewById(R.id.no_sugar);
         selected_sugar.setImageResource(R.drawable.no_bw);
