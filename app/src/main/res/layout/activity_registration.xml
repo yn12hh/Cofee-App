@@ -101,7 +101,7 @@
         android:background="@drawable/button_take_an_order"
         android:gravity="center"
         android:onClick="finishRegestration"
-        android:text="@string/register_text"
+        android:text="@string/register"
         android:textColor="?attr/colorBackgroundFloating"
         android:textColorHighlight="?attr/colorBackgroundFloating"
         android:textColorHint="?attr/colorBackgroundFloating"
