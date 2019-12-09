@@ -44,5 +44,6 @@
     <string name="size">Size</string>
     <string name="intensity">Intensity</string>
     <string name="hint_location_field">Your current location (tap to edit)</string>
+    <string name="deliver_image">deliver_image</string>
 
 </resources>
