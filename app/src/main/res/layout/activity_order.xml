@@ -163,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
-                    android:text="Size: Small"
+                    android:text="@string/size_small"
                     android:textColor="#817E7E"
                     android:textDirection="ltr" />
 
@@ -221,7 +221,7 @@
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
-                    android:text="Milk: No Milk"
+                    android:text="@string/milk_no_milk"
                     android:textColor="#817E7E"
                     android:textDirection="ltr" />
 
@@ -306,8 +306,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
-                    android:paddingStart="3dp"
-                    android:text="Sugar: No Sugar"
+                    android:paddingLeft="3dp"
+                    android:text="@string/sugar_no_sugar"
                     android:textColor="#817E7E"
                     android:textDirection="ltr" />
 
@@ -392,7 +392,7 @@
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
                     android:paddingLeft="3dp"
-                    android:text="Intensity: Regular"
+                    android:text="@string/intensity_regular"
                     android:textColor="#817E7E"
                     android:textDirection="ltr" />
 
@@ -461,7 +461,7 @@
         android:enabled="true"
         android:layoutDirection="ltr"
         android:onClick="sendOrder"
-        android:text="Done"
+        android:text="@string/done"
         android:textColor="@android:color/background_light"
         android:textDirection="ltr"
         android:textSize="26sp"
