@@ -4,6 +4,7 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -35,6 +36,9 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
         setContentView(R.layout.activity_check_out);
         Intent intent = getIntent();
 
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
         TextView type = findViewById(R.id.user_type);
         TextView size = findViewById(R.id.user_size);
         TextView milk = findViewById(R.id.user_milk);
@@ -56,7 +60,7 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
         });
         timeInput.setText("now - " + timeFormat.format(now) + " (tap to edit)");
     }
-    public void finishOrder(View view) {
+    public void finishOrder(View view) { //this function is called when clicking the "OK Go" butto
         Intent intent = new Intent(this, endScreen.class);
         intent.putExtra("location", locationInput.getText().toString());
         intent.putExtra("time", timeInput.getText().toString());

@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/pouring_coffee_image"
         android:layout_width="418dp"
         android:layout_height="301dp"
         android:layout_marginBottom="64dp"
@@ -23,23 +23,23 @@
         android:id="@+id/welcome_divider"
         android:layout_width="446dp"
         android:layout_height="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/logo_imageView"
+        app:layout_constraintBottom_toTopOf="@+id/app_logo_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/pouring_coffee_image"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line_welcome" />
 
     <ImageView
-        android:id="@+id/logo_imageView"
+        android:id="@+id/app_logo_image"
         android:layout_width="127dp"
         android:layout_height="114dp"
         android:contentDescription="@string/applogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/pouring_coffee_image"
         app:srcCompat="@drawable/app_logo" />
 
     <Button
@@ -55,26 +55,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/welcome_back_mr_gindi_image" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/welcome_back_mr_gindi_image"
         android:layout_width="158dp"
         android:layout_height="34dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/app_logo_image"
         app:srcCompat="@drawable/welcome_back" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/registration_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:background="#5A4625"
         android:onClick="registerNow"
-        android:text="registration"
+        android:text="@string/registration_button_text"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
