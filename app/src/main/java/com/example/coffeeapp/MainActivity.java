@@ -20,7 +20,7 @@ public static final int REG_REQUEST = 2;
 
     }
 
-    public void usualOrder(View view) {
+    public void usualOrder(View view) { //this function is called when "take an order" button is pressed
         SharedPreferences user_info = getSharedPreferences("UserInfo", MODE_PRIVATE);
         if(user_info.getBoolean("Registered", false)) {
             Intent intent = new Intent(this, orderActivity.class);
@@ -34,7 +34,7 @@ public static final int REG_REQUEST = 2;
     public void registerNow(View view) {
         registerFunction();
     }
-    public void registerFunction() {
+    public void registerFunction() { //this function is called when "registration" button is pressed
         Intent intent = new Intent(this, registration.class);
         startActivity(intent);
     }
