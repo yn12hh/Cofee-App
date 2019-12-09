@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     android:orientation="vertical"
+    android:textDirection="ltr"
     tools:context=".checkOut">
 
 
@@ -12,6 +14,7 @@
         android:id="@+id/check_out_title"
         android:layout_width="398dp"
         android:layout_height="45dp"
+        android:layout_gravity="center"
         android:padding="3dp"
         app:srcCompat="@drawable/checkout_title" />
 
@@ -22,8 +25,11 @@
         app:srcCompat="@drawable/line_welcome" />
 
     <ScrollView
+        android:id="@+id/order_finish_layout"
         android:layout_width="match_parent"
-        android:layout_height="556dp">
+        android:layout_height="548dp"
+        android:layoutDirection="ltr"
+        android:textDirection="ltr">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,26 +37,30 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView6"
+                android:id="@+id/your_order_title"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginStart="30dp"
                 app:srcCompat="@drawable/your_order" />
 
             <LinearLayout
                 android:id="@+id/order_details_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginStart="30dp"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                android:textDirection="ltr">
 
                 <LinearLayout
                     android:id="@+id/categories"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:orientation="vertical">
+                    android:layoutDirection="ltr"
+                    android:orientation="vertical"
+                    android:textDirection="ltr">
 
                     <TextView
                         android:id="@+id/type_text"
@@ -107,9 +117,11 @@
                 <LinearLayout
                     android:id="@+id/user_parameters"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:orientation="vertical">
+                    android:layoutDirection="ltr"
+                    android:orientation="vertical"
+                    android:textDirection="ltr">
 
                     <TextView
                         android:id="@+id/user_type"
@@ -161,12 +173,24 @@
                         android:textSize="16sp" />
                 </LinearLayout>
 
+                <ImageView
+                    android:id="@+id/coffee_icon"
+                    android:layout_width="241dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:baselineAlignBottom="false"
+                    android:foregroundGravity="center_vertical|right"
+                    android:src="@drawable/small_color" />
+
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/checkout_divider"
+                android:id="@+id/checkout_upper_divider"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:paddingTop="3dp"
                 android:paddingBottom="3dp"
                 app:srcCompat="@drawable/divider" />
@@ -175,7 +199,7 @@
                 android:id="@+id/buildings"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
                 android:scaleType="fitStart"
                 app:srcCompat="@drawable/buldings" />
@@ -184,7 +208,7 @@
                 android:id="@+id/send_to_title"
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="2dp"
                 app:srcCompat="@drawable/send_to" />
 
@@ -192,21 +216,22 @@
                 android:id="@+id/location_input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="30dp"
                 android:hint="Your current location (tap to edit)"
                 android:inputType="textPostalAddress" />
 
             <TextView
                 android:id="@+id/text_order"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp" />
 
             <ImageView
                 android:id="@+id/clock"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
                 android:scaleType="fitStart"
                 app:srcCompat="@drawable/clock" />
 
@@ -214,23 +239,34 @@
                 android:id="@+id/at"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="30dp"
                 app:srcCompat="@drawable/at" />
 
             <Button
                 android:id="@+id/time_input"
                 android:layout_width="379dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#00927E7E"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/checkout_upper_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                app:srcCompat="@drawable/divider" />
 
         </LinearLayout>
     </ScrollView>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="73dp"
+        android:id="@+id/order_send_button"
+        android:layout_width="206dp"
+        android:layout_height="39dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/order_finish_backgound"
         android:onClick="finishOrder"
-        android:text="OK GO!"
         android:textSize="24sp" />
 
 

@@ -63,7 +63,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
-                    android:text="@string/type"
+                    android:paddingStart="3dp"
+                    android:text="Type: Please Select"
                     android:textColor="#817E7E"
                     android:textDirection="ltr" />
 
@@ -71,6 +72,7 @@
                     android:id="@+id/coffee_type_scroll2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
                     android:layoutDirection="ltr"
                     android:scrollbarDefaultDelayBeforeFade="0"
                     android:scrollbarSize="0dp"
@@ -257,7 +259,7 @@
                         android:onClick="milkChoice"
                         android:padding="22dp"
                         android:textDirection="ltr"
-                        app:srcCompat="@drawable/no_bw" />
+                        app:srcCompat="@drawable/regular_bw" />
 
                     <ImageView
                         android:id="@+id/soy_milk"
@@ -271,7 +273,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:textDirection="ltr"
-                        app:srcCompat="@drawable/no_bw" />
+                        app:srcCompat="@drawable/soy_bw" />
 
                     <ImageView
                         android:id="@+id/almonds_milk"
@@ -285,7 +287,7 @@
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
                         android:textDirection="ltr"
-                        app:srcCompat="@drawable/no_bw" />
+                        app:srcCompat="@drawable/almond_bw" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -294,6 +296,7 @@
                 android:id="@+id/sugar_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
                 android:layoutDirection="ltr"
                 android:orientation="vertical"
                 android:textDirection="ltr">
@@ -303,7 +306,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
-                    android:paddingLeft="3dp"
+                    android:paddingStart="3dp"
                     android:text="Sugar: No Sugar"
                     android:textColor="#817E7E"
                     android:textDirection="ltr" />
@@ -321,6 +324,7 @@
                         android:id="@+id/no_sugar"
                         android:layout_width="90dp"
                         android:layout_height="90dp"
+                        android:layout_marginStart="20dp"
                         android:layout_weight="1"
                         android:cropToPadding="false"
                         android:layoutDirection="ltr"
@@ -413,7 +417,7 @@
                         android:onClick="intensityChoice"
                         android:padding="22dp"
                         android:textDirection="ltr"
-                        app:srcCompat="@drawable/no_bw" />
+                        app:srcCompat="@drawable/decaff_bw" />
 
                     <ImageView
                         android:id="@+id/one_caff"
