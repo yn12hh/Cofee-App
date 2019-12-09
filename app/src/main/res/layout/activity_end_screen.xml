@@ -7,7 +7,7 @@
 
 
     <ImageView
-        android:id="@+id/end_message_image"
+        android:id="@+id/imageView3"
         android:layout_width="339dp"
         android:layout_height="91dp"
         android:contentDescription="@string/end_message"
@@ -19,28 +19,27 @@
         app:srcCompat="@drawable/wonderful_your_order_is_already_on_the_way" />
 
     <ImageView
-        android:id="@+id/divider"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
         android:contentDescription="@string/line_done"
-        app:layout_constraintBottom_toTopOf="@+id/backround_lines"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backround_lines"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line_done" />
 
     <ImageView
-        android:id="@+id/backround_lines"
+        android:id="@+id/imageView5"
         android:layout_width="418dp"
         android:layout_height="171dp"
+        android:layout_marginTop="108dp"
         android:contentDescription="@string/backrounds_lines"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/end_message_image"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/backrounds_lines" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
