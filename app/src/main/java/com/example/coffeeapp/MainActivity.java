@@ -42,7 +42,7 @@ private SharedPreferences user_info;
         welcome.setText(welcomeString);
     }
 
-    public void usualOrder(View view) {
+    public void usualOrder(View view) { //this function is called when "take an order" button is pressed
         if(user_info.getBoolean("Registered", false)) {
             Intent intent = new Intent(this, orderActivity.class);
             startActivityForResult(intent, TEXT_REQUEST);
@@ -55,7 +55,7 @@ private SharedPreferences user_info;
     public void registerNow(View view) {
         registerFunction();
     }
-    public void registerFunction() {
+    public void registerFunction() { //this function is called when "registration" button is pressed
         Intent intent = new Intent(this, registration.class);
         startActivity(intent);
     }
