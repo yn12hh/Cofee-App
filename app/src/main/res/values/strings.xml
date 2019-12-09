@@ -47,5 +47,9 @@
     <string name="personal_info">Personal Info</string>
     <string name="deliver_image">deliver_image</string>
     <string name="order_text">Order</string>
+    <string name="where_ever_you_go">Where Ever You GO...</string>
+    <string name="at">At:</string>
+    <string name="send_to">Send To:</string>
+    <string name="your_order_title_checkout">Your Order:</string>
 
 </resources>

@@ -12,15 +12,15 @@
     android:textDirection="ltr"
     tools:context=".orderActivity">
 
-    <ImageView
-        android:id="@+id/order_title"
-        android:layout_width="371dp"
-        android:layout_height="47dp"
-        android:layout_gravity="center"
-        android:layout_margin="2dp"
-        android:paddingStart="7dp"
-        android:paddingEnd="7dp"
-        app:srcCompat="@drawable/order_title_backround" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kaushan_script"
+        android:text="Choose Your Moment"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/title_divider"
