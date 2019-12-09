@@ -7,7 +7,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/background_line"
         android:layout_width="339dp"
         android:layout_height="91dp"
         android:contentDescription="@string/end_message"
@@ -19,36 +19,27 @@
         app:srcCompat="@drawable/wonderful_your_order_is_already_on_the_way" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/divder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/line_done"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintBottom_toTopOf="@+id/end_message_image"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/background_line"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/line_done" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="292dp"
-        android:layout_height="268dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/deliver_endscreen" />
-
-    <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/end_message_image"
         android:layout_width="418dp"
         android:layout_height="171dp"
+        android:layout_marginTop="108dp"
         android:contentDescription="@string/backrounds_lines"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background_line"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/backrounds_lines" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
