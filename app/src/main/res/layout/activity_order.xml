@@ -459,12 +459,14 @@
         android:layout_height="55dp"
         android:background="@drawable/order_button_backround"
         android:enabled="true"
+        android:fontFamily="@font/kaushan_script"
         android:layoutDirection="ltr"
         android:onClick="sendOrder"
         android:text="@string/done"
         android:textColor="@android:color/background_light"
         android:textDirection="ltr"
         android:textSize="26sp"
+        android:textStyle="bold"
         android:visibility="visible" />
 
 </LinearLayout>

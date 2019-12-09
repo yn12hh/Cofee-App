@@ -265,8 +265,11 @@
         android:layout_width="206dp"
         android:layout_height="39dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:background="@drawable/order_finish_backgound"
+        android:background="@drawable/button_take_an_order"
+        android:fontFamily="@font/kaushan_script"
         android:onClick="finishOrder"
+        android:text="Order"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp" />
 
 
