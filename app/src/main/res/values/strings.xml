@@ -35,7 +35,7 @@
     <string name="employeeid_field">EmployeeID:</string>
     <string name="employeeid_field_blank_message">enter your Gindi employee ID</string>
     <string name="registration_title">Registration</string>
-    <string name="register_text">register</string>
+    <string name="register">register</string>
     <string name="done">Done</string>
     <string name="intensity_regular">Intensity: Regular</string>
     <string name="sugar_no_sugar">Sugar: No Sugar</string>
@@ -45,5 +45,6 @@
     <string name="intensity">Intensity</string>
     <string name="hint_location_field">Your current location (tap to edit)</string>
     <string name="deliver_image">deliver_image</string>
+    <string name="order_text">Order</string>
 
 </resources>
