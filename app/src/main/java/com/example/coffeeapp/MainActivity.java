@@ -18,11 +18,11 @@ public static final int REG_REQUEST = 2;
 
     }
 
-    public void usualOrder(View view) {
+    public void usualOrder(View view) { //this function is called when "take an order" button is pressed
         Intent intent = new Intent(this, orderActivity.class);
         startActivityForResult(intent, TEXT_REQUEST);
     }
-    public void registerNow(View view) {
+    public void registerNow(View view) { //
         Intent intent = new Intent(this, registration.class);
         startActivity(intent);
     }
