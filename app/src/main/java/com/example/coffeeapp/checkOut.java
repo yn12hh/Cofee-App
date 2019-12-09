@@ -68,7 +68,7 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
     }
 
     @Override
-    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+    public void onTimeSet(TimePicker view, int hourOfDay, int minute) { //deals with the time the user inserted in the timepicker, and formating it
         String orderTime = "";
         orderHour = hourOfDay;
         orderMinute = minute;
