@@ -47,5 +47,6 @@
     <string name="personal_info">Personal Info</string>
     <string name="deliver_image">deliver_image</string>
     <string name="order_text">Order</string>
+    <string name="type_select_prompt_message">Type: Please Select</string>
 
 </resources>

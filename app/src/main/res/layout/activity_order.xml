@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layoutDirection="ltr"
                     android:paddingStart="3dp"
-                    android:text="Type: Please Select"
+                    android:text="@string/type_select_prompt_message"
                     android:textColor="#817E7E"
                     android:textDirection="ltr" />
 
