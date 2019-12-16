@@ -60,7 +60,7 @@ public class checkOut extends AppCompatActivity implements TimePickerDialog.OnTi
         });
         timeInput.setText("now - " + timeFormat.format(now) + " (tap to edit)");
     }
-    public void finishOrder(View view) { //this function is called when clicking the "OK Go" butto
+    public void finishOrder(View view) { //this function is called when clicking the "OK Go" button
         Intent intent = new Intent(this, endScreen.class);
         intent.putExtra("location", locationInput.getText().toString());
         intent.putExtra("time", timeInput.getText().toString());
